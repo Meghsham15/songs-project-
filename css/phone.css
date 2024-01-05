@@ -1,0 +1,80 @@
+.container {
+    width: 100%;
+    font-size: 12px;
+}
+.songItemContainer {
+    margin-top: 32px;
+    margin-left: 163px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* left: -49px; */
+    position: relative;
+    left: -101px;
+}
+.songItem {
+    height: 44px;
+    width: 160%;
+    background: white;
+    display: flex;
+    color: black;
+    margin: 6px 0;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 34px;
+}
+.songItem:hover{
+    text-shadow: 1px 0px 2px red;
+    font-size: 13px;
+    /* display: flex; */
+    /* margin: 12px 0; */
+    /* justify-content: space-between;
+    align-items: center;
+    border-radius: 34px; */
+    box-shadow: 2px 2px 14px red;
+    cursor: pointer;
+}
+
+.songInfo {
+    position: absolute;
+    top: 23px;
+    left: 10vw;
+    font-family: 'Varela Round', sans-serif;
+}
+.icons {
+    margin-top: 20px;
+    display: flex;
+}
+.csStyle {
+    text-shadow: 2px 1px 3px red;
+    font-size: 15px;
+    height: 55px;
+    /* width: 167%; */
+    background: cadetblue;
+    display: flex;
+    color: white;
+    font-weight: bold;
+    margin: 12px 0;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 34px;
+    box-shadow: 2px 2px 14px red;
+}
+.songItemPlay:hover {
+    width: 30px;
+    border-radius: 50%;
+    box-shadow: 1px 1px 8px blue;
+    margin: 0 15px;
+    cursor: pointer;
+}
+.bottom {
+    position: sticky;
+    background-color: black;
+    height: 100px;
+    bottom: 14vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    flex-direction: column;
+}

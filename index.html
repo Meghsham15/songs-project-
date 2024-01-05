@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error 404</title>
+    <link id="ttl" rel="icon" href="./img/mjlogo.png">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" media="screen and (max-width: 582px)" href="./css/phone.css">
+
+</head>
+<body>
+    <nav>
+        <ul>
+            <li class="brand"><img src="./img/mjlogo.png" alt="logo">MJ</li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <div class="songList">
+            <h1>Best of MJ Songs </h1>
+            <div id="songItemContainer" class="songItemContainer">
+                    <!-- <div class="songItem" id="songItem<%=ele.id %>">
+                    <img class="imge" alt="1">
+                    <span class="songName song"+<%=ele.id %>></span>
+                    <span class="songListPlay"><span class="timeStamp"><div class="txt">05:30</div> <img src="./img/play.svg" alt="" class="songItemPlay" id=<%=ele.id %>></span></span>
+                    </div> -->
+                
+            </div>
+        </div>
+        <div class="songBanner"></div>
+
+    </div>
+
+    <div class="bottom">
+        <input type="range" name="range" id="myProgessBar" class="mpb" value="0" min="0" max="100">
+        <!-- <audio src="songs/1.mp3"></audio> -->
+        <div class="icons">
+            <img src="./img/back.svg" alt=""  id="previous">
+            <img src="./img/play.svg" alt="" id="masterPlay" >
+            <img src="./img/next.svg" alt="" id="next" >
+        </div>
+        <div class="songInfo">
+            <img src="./img/playing.gif" id="gif" width="44px" alt="">
+            <span id="masterSongName"></span>
+        </div>
+    </div>
+    
+    <script src="https://kit.fontawesome.com/d65ee33eac.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- <script src="/js/songs.js"></script> -->
+    <script type="module" src="./js/songs.js"></script>
+    <script type="module" src="./js/index.js"></script>
+
+</body>
+</html>
