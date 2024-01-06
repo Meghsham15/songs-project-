@@ -3,6 +3,7 @@ $('h1').css('color', 'red');
 console.log('Eureka');
 let songIndex = 0;
 let audioElement = new Audio('./songs/1.mp3');
+audioElement.controls = true;
 let masterPlay = $('#masterPlay');
 let myProgressBar = $('#myProgessBar');
 let gif = $('#gif');
@@ -12,6 +13,20 @@ console.log(masterSongName.text());
 let songItemPlay = $('.songItemPlay');
 let songItems = Array.from(document.getElementsByClassName('songItem'));
 timeDur.text("");
+let volume = document.querySelector('#volumeControl img');
+let vol = document.getElementById('vol');
+volume.addEventListener('click',()=>{
+    vol.classList.toggle('display');
+});
+audioElement.volume = vol.value/100;
+vol.addEventListener('input',()=>{
+    audioElement.volume = vol.value/100;
+})
+
+// function setVol(){
+//     audioElement.volume = vol.value/100;
+// }
+
 // Play pause Function ---
 function plPa(x) {
     if (x.attr('src') == "./img/play.svg") {
@@ -74,6 +89,7 @@ songItemPlay.click(function () {
             }
             else{
                 audioElement.src = play;
+                
                 masterPlay.attr('src', './img/pause.svg');
                 gif.css("opacity", "1");
                 audioElement.play();
@@ -176,7 +192,7 @@ $("#previous").click(function () {
             $(sI).addClass("csStyle");
             let play = './songs/' + p + '.mp3'
             if ($(h).attr("src") == './img/pause.svg') {
-                audioElement.src = play;
+                audioElement.src = play; 
                 audioElement.play();
             }
 

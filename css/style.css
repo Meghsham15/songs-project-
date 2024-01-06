@@ -6,6 +6,9 @@
 body{
     background: url('../img/bg.jpg') no-repeat center center/cover;
 }
+.display{
+    display: none;
+}
 /* Navbar ---  */
 
 nav{
@@ -13,6 +16,23 @@ nav{
     /* margin: 2px 0; */
     position: sticky;
     top: 2px;
+}
+#vol{
+    /* display: none; */
+    position: absolute;
+    right: 37%;
+    bottom: 60%;
+    width: 100px;
+    height: 6px;
+    transform: rotate(90deg);
+    cursor: pointer;
+    /* display: none; */
+}
+#volumeControl{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
 }
 nav ul{
     display: flex;

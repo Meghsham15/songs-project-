@@ -2,6 +2,11 @@
     width: 100%;
     font-size: 12px;
 }
+#vol {
+    /* display: none; */
+    position: absolute;
+    right: 3%;
+}
 .songItemContainer {
     margin-top: 32px;
     margin-left: 163px;
