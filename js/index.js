@@ -2,7 +2,7 @@
 $('h1').css('color', 'red');
 console.log('Eureka');
 let songIndex = 0;
-let audioElement = new Audio('../songs/1.mp3');
+let audioElement = new Audio('./songs/1.mp3');
 let masterPlay = $('#masterPlay');
 let myProgressBar = $('#myProgessBar');
 let gif = $('#gif');
@@ -14,11 +14,11 @@ let songItems = Array.from(document.getElementsByClassName('songItem'));
 timeDur.text("");
 // Play pause Function ---
 function plPa(x) {
-    if (x.attr('src') == "../img/play.svg") {
-        x.attr('src', '../img/pause.svg');
+    if (x.attr('src') == "./img/play.svg") {
+        x.attr('src', './img/pause.svg');
     }
     else {
-        x.attr('src', '../img/play.svg');
+        x.attr('src', './img/play.svg');
     }
 }
 masterPlay.click(function () {
@@ -51,7 +51,7 @@ masterPlay.click(function () {
     audioElement.currentTime = prg * audioElement.duration / 100;
 })
 songItemPlay.click(function () {
-    $('.songItemPlay').attr('src', '../img/play.svg');
+    $('.songItemPlay').attr('src', './img/play.svg');
     let b = $(this).attr('id');
     let a = '#' + $(this).attr('id');
     let z = $(a)
@@ -66,15 +66,15 @@ songItemPlay.click(function () {
             let lol = $("." + cls).parents(".songItem");
             let sI = "#" + $(lol).attr("class") + p;
             $(sI).addClass("csStyle");
-            let play = '../songs/' + p + '.mp3'
-            if (z.attr('src') == '../img/play.svg') {
+            let play = './songs/' + p + '.mp3'
+            if (z.attr('src') == './img/play.svg') {
                 audioElement.src = play;
-                masterPlay.attr('src', '../img/play.svg');
+                masterPlay.attr('src', './img/play.svg');
                 audioElement.pause();
             }
             else{
                 audioElement.src = play;
-                masterPlay.attr('src', '../img/pause.svg');
+                masterPlay.attr('src', './img/pause.svg');
                 gif.css("opacity", "1");
                 audioElement.play();
             }
@@ -89,21 +89,21 @@ masterPlay.click(function () {
             let h = "#" + (i + 1);
             let p = i + 1;
             songIndex = p;
-            let play = '../songs/' + p + '.mp3'
-            if (masterPlay.attr('src') == '../img/play.svg') {
+            let play = './songs/' + p + '.mp3'
+            if (masterPlay.attr('src') == './img/play.svg') {
                 audioElement.src = play;
                 myProgressBar.val(prg);
                 audioElement.currentTime = (prg * auD / 100)+1;
                 audioElement.pause();
-                $(h).attr('src', "../img/play.svg");
+                $(h).attr('src', "./img/play.svg");
                 gif.css('opacity', '0');
             }
-            else if (masterPlay.attr('src') == '../img/pause.svg') {
+            else if (masterPlay.attr('src') == './img/pause.svg') {
                 audioElement.src = play;
                 myProgressBar.val(prg);
                 audioElement.currentTime = (prg * auD / 100)+1;
                 audioElement.play();
-                $(h).attr('src', "../img/pause.svg");
+                $(h).attr('src', "./img/pause.svg");
                 gif.css('opacity', '1');
             }
 
@@ -111,7 +111,7 @@ masterPlay.click(function () {
     }
 })
 $("#next").click(function () {
-    songItemPlay.attr("src", "../img/play.svg");
+    songItemPlay.attr("src", "./img/play.svg");
     $(".songItem").removeClass("csStyle");
     for (i = 0; i < songs.length; i++) {
         if (masterSongName.text() == songs[i].songName) {
@@ -122,12 +122,12 @@ $("#next").click(function () {
             else {
                 i += 1;
             }
-            $("#" + (i + 1)).attr('src', '../img/pause.svg');
-            if ($("#" + (i + 1)).attr("src") == '../img/pause.svg') {
-                masterPlay.attr("src", '../img/pause.svg');
+            $("#" + (i + 1)).attr('src', './img/pause.svg');
+            if ($("#" + (i + 1)).attr("src") == './img/pause.svg') {
+                masterPlay.attr("src", './img/pause.svg');
             }
             else {
-                masterPlay.attr("src", '../img/play.svg');
+                masterPlay.attr("src", './img/play.svg');
             }
             masterSongName.text(songs[i].songName)
             let p = i + 1;
@@ -137,8 +137,8 @@ $("#next").click(function () {
             let sI = "#" + $(lol).attr("class") + p;
             // console.log(sI);
             $(sI).addClass("csStyle");
-            let play = '../songs/' + p + '.mp3'
-            if ($(h).attr("src") == '../img/pause.svg') {
+            let play = './songs/' + p + '.mp3'
+            if ($(h).attr("src") == './img/pause.svg') {
                 audioElement.src = play;
                 audioElement.play();
             }
@@ -148,7 +148,7 @@ $("#next").click(function () {
     }
 })
 $("#previous").click(function () {
-    songItemPlay.attr("src", "../img/play.svg");
+    songItemPlay.attr("src", "./img/play.svg");
     $(".songItem").removeClass("csStyle");
     for (i = 0; i < songs.length; i++) {
         if (masterSongName.text() == songs[i].songName) {
@@ -159,12 +159,12 @@ $("#previous").click(function () {
             else {
                 i -= 1;
             }
-            $("#" + (i + 1)).attr('src', '../img/pause.svg');
-            if ($("#" + (i + 1)).attr("src") == '../img/pause.svg') {
-                masterPlay.attr("src", '../img/pause.svg');
+            $("#" + (i + 1)).attr('src', './img/pause.svg');
+            if ($("#" + (i + 1)).attr("src") == './img/pause.svg') {
+                masterPlay.attr("src", './img/pause.svg');
             }
             else {
-                masterPlay.attr("src", '../img/play.svg');
+                masterPlay.attr("src", './img/play.svg');
             }
             masterSongName.text(songs[i].songName)
             let p = i + 1;
@@ -174,8 +174,8 @@ $("#previous").click(function () {
             let sI = "#" + $(lol).attr("class") + p;
             // console.log(sI);
             $(sI).addClass("csStyle");
-            let play = '../songs/' + p + '.mp3'
-            if ($(h).attr("src") == '../img/pause.svg') {
+            let play = './songs/' + p + '.mp3'
+            if ($(h).attr("src") == './img/pause.svg') {
                 audioElement.src = play;
                 audioElement.play();
             }
