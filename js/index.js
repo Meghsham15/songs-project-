@@ -25,7 +25,7 @@ masterPlay.click(function () {
     plPa(masterPlay);
 })
 // imported songs array from songs.js file ---
-import songs from ".../songs.js";
+import songs from "./songs.js";
 // export default songs;
 // console.log(songs);
 
